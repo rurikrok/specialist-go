@@ -27,6 +27,11 @@ func main() {
 	fmt.Print("Enter fuel consumption in liters per 100 km: ")
 	fmt.Scan(&fuelConsumption)
 
+	if fuelConsumption < 5 || fuelConsumption > 25 {
+		fmt.Println("Error: Fuel consumption must be between 5 and 25 liters per 100 km.")
+		return
+	}
+
 	totalFuel := (distance * fuelConsumption) / 100
 	totalCost := totalFuel * gasolineCost
 
