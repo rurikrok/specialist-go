@@ -63,7 +63,10 @@ func codeToStringMap(code string) string {
 }
 
 func main() {
-	code := "220411112603141304"
+	var code string
+	fmt.Print("Enter the code: ")
+	fmt.Scan(&code)
+
 	fmt.Println(codeToString(code))
 	fmt.Println(codeToStringMap(code))
 }
